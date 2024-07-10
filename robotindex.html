@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Robot Control</title>
+    <script>
+        function sendDirection(direction) {
+            const xhr = new XMLHttpRequest();
+            xhr.open("POST", "store_direction.php", true);
+            xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                    // Optional: You can add some feedback here if needed
+                    console.log(xhr.responseText);
+                }
+            };
+
+            xhr.send("direction=" + direction);
+        }
+
+        function playAudio(audio) {
+            audio.play();
+        }
+
+        const audio = new Audio("./clicksound.wav");
+        const audio2 = new Audio("./stop.wav");
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>robot control</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body class="bodybg">
+    <div class="container">
+        <div class="center">
+            <!-- stop button -->
+            <div class="stop">
+                <button type="button" class="stopbutton" onclick="playAudio(audio2); sendDirection('Stop');">
+                    <i class="fa fa-pause" aria-hidden="true"></i>
+                </button>
+            </div>
+
+            <!-- left button -->
+            <div class="left">
+                <button type="button" class="leftbutton" onclick="playAudio(audio); sendDirection('Left');">
+                    <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                </button>
+            </div>
+
+            <!-- forward button -->
+            <div class="forward">
+                <button type="button" class="forwardbutton" onclick="playAudio(audio); sendDirection('Forward');">
+                    <i class="fa fa-chevron-up" aria-hidden="true"></i>
+                </button>
+            </div>
+
+            <!-- right button -->
+            <div class="right">
+                <button type="button" class="rightbutton" onclick="playAudio(audio); sendDirection('Right');">
+                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                </button>
+            </div>
+
+            <!-- backward button -->
+            <div class="backward">
+                <button type="button" class="backwardbutton" onclick="playAudio(audio); sendDirection('Backward');">
+                    <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                </button>
+            </div>
+        </div>
+        <div class="title"><h1> لوحة التحكم بالروبوت </h1></div>
+    </div>
+</body>
+</html>

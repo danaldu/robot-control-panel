@@ -1,0 +1,250 @@
+.container {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". title ."
+      ". center ."
+      ". . .";
+  }
+  
+  .center {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ". forward ."
+      "left stop right"
+      ". backward .";
+    grid-area: center;
+  }
+  
+  .stop { grid-area: stop; }
+  
+  .left { grid-area: left; }
+  
+  .forward { grid-area: forward; }
+  
+  .right { grid-area: right; }
+  
+  .backward { grid-area: backward; }
+  
+  .title { grid-area: title; }
+  
+
+    .bodybg {
+background-color: #131313;
+
+
+
+
+}
+
+
+h1 {
+color: rgb(255, 255, 255);
+font-size: 60px;
+align-items: center;
+font-family: "Handjet", sans-serif;
+font-optical-sizing: auto;
+font-weight: <weight>;
+font-style: normal;
+font-variation-settings:
+  "ELGR" 1,
+  "ELSH" 2;
+opacity: 0.8;
+
+
+
+
+    } 
+
+
+
+ button:hover {
+  opacity: 1;
+  }
+  
+div {
+padding-top: 5px;
+padding-right: 5px;
+padding-bottom: 5px;
+padding-left: 5px;
+     }
+
+
+
+
+
+
+
+      /* stop button  */
+.stopbutton{
+ --bg: #E85A5A;
+--text-color: #fff;
+position: relative;
+width: 60px;
+height: 60px;
+border: none;
+background: var(--bg);
+color: var(--text-color);
+font-weight: bold;
+text-transform: uppercase;
+transition: 0.2s;
+border-radius: 60px;
+opacity: 0.8;
+letter-spacing: 1px;
+box-shadow: #B73B3B 0px 7px 2px, #000 0px 8px 5px;
+margin: 10px;
+padding: 5px;
+
+      }
+
+
+
+.stopbutton:active {
+top: 4px;
+box-shadow: #c0392b 0px 3px 2px,#000 0px 3px 5px;
+      }
+
+      
+
+
+
+
+
+      /* forward button  */
+.forwardbutton{
+--bg: #6BA5C5;
+--text-color: #fff;
+position: relative;
+width: 60px;
+height: 60px;
+border: none;
+background: var(--bg);
+color: var(--text-color);
+padding: 5px;
+font-weight: bold;
+text-transform: uppercase;
+transition: 0.2s;
+border-radius: 60px;
+opacity: 0.8;
+letter-spacing: 1px;
+box-shadow: #166088 0px 7px 2px, #000 0px 8px 5px;
+margin: 10px;
+       
+          
+}
+
+
+.forwardbutton:active {
+top: 4px;
+box-shadow: #32177d 0px 3px 2px,#000 0px 3px 5px;
+}
+
+
+
+
+
+/* backward button  */
+.backwardbutton{
+--bg: #5021B5;
+--text-color: #fff;
+position: relative;
+width: 60px;
+height: 60px;
+border: none;
+background: var(--bg);
+color: var(--text-color);
+padding: 5px;
+font-weight: bold;
+text-transform: uppercase;
+transition: 0.2s;
+border-radius: 60px;
+opacity: 0.8;
+letter-spacing: 1px;
+box-shadow: #310889 0px 7px 2px, #000 0px 8px 5px;
+margin: 10px;
+                        
+               
+}
+
+
+.backwardbutton:active {
+top: 4px;
+box-shadow: #17093c 0px 3px 2px,#000 0px 3px 5px;
+}
+
+
+
+
+ /* right button  */
+
+.rightbutton{
+--bg: #53D568;
+--text-color: #fff;
+position: relative;
+width: 60px;
+height: 60px;
+border: none;
+background: var(--bg);
+color: var(--text-color);
+padding: 5px;
+font-weight: bold;
+text-transform: uppercase;
+transition: 0.2s;
+border-radius: 60px;
+opacity: 0.8;
+letter-spacing: 1px;
+box-shadow: #36774D 0px 7px 2px, #000 0px 8px 5px;
+margin: 10px;
+
+                                        
+                       
+                       
+}
+
+
+.rightbutton:active {
+top: 4px;
+box-shadow: #36774D 0px 3px 2px,#000 0px 3px 5px;
+}
+
+
+
+
+ /* left button  */
+
+ .leftbutton{
+    --bg: #E7C756;
+    --text-color: #fff;
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border: none;
+    background: var(--bg);
+    color: var(--text-color);
+    padding: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.2s;
+    border-radius: 60px;
+    opacity: 0.8;
+    letter-spacing: 1px;
+    box-shadow: #D48A1A 0px 7px 2px, #000 0px 8px 5px;
+    margin: 10px;
+ 
+    
+                                            
+                           
+                           
+    }
+    
+    
+    .leftbutton:active {
+    top: 4px;
+    box-shadow: #D48A1A 0px 3px 2px,#000 0px 3px 5px;
+    }
+    
